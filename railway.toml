@@ -1,2 +1,2 @@
 [build]
-nixpkgs = ["libGL"]
+nixpkgs = ["libGL", "libxkbcommon", "libxcb", "xorg.libX11", "xorg.libXext"]
