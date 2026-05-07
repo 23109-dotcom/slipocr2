@@ -1,8 +1,8 @@
 fastapi
-uvicorn
-paddleocr
+uvicorn[standard]
+paddleocr==3.2.1
 paddlepaddle
-pymupdf
 opencv-python
+pymupdf
 numpy
 python-multipart
