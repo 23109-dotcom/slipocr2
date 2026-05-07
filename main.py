@@ -5,6 +5,7 @@ import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from paddleocr import PaddleOCR
 
 TOTAL_KW = [
@@ -123,6 +124,14 @@ def pdf_to_images(pdf_path):
     return paths
 
 app = FastAPI(title="Slip OCR")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/analyse")
 async def analyse_slip(file: UploadFile = File(...)):
