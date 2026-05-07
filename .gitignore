@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# PaddleOCR models
+.paddlex/
+*.pdmodel
+*.pdiparams
+*.pdopt
+
+# Virtual Environment
+ocr_env/
+
+# รูปภาพทดสอบ
+*.jpg
+*.jpeg
+*.png
+*.pdf
+*.webp
